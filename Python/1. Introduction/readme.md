@@ -3,14 +3,13 @@
 ## 📌 Table of Contents
 - [ 🔰 Introduction to Python ](#--introduction-to-python-)
   - [📌 Table of Contents](#-table-of-contents)
-  - [❓ What is Python?](#-what-is-python)
+  - [📚 What is Python?](#-what-is-python)
   - [📚 Features of Python](#-features-of-python)
-  - [🖨️ Printing something](#️-printing-something)
+  - [📚 Printing something](#-printing-something)
 <hr>
-
 <br><br>
 
-## ❓ What is Python?
+## 📚 What is Python?
 - Python is a high-level, interpreted, interactive and object-oriented scripting language.
 - Python is designed to be highly readable.
 - It uses English keywords frequently where as other languages use punctuation, and it has fewer syntactical constructions than other languages.
@@ -40,7 +39,7 @@
 
 <br><br>
 
-## 🖨️ Printing something
+## 📚 Printing something
 - To print something in Python, we use the `print()` function.
 
     ```python
@@ -51,5 +50,5 @@
     ```
     Hello, World!
     ```
-
+<hr>
 

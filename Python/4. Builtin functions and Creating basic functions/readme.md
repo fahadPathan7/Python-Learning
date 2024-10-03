@@ -1,6 +1,12 @@
 # <div align="center"> 🔰 Level 4 Built in Functions & Creating Basic Functions </div>
 
 ## 📌 Table of Contents
+- [ 🔰 Level 4 Built in Functions \& Creating Basic Functions ](#--level-4-built-in-functions--creating-basic-functions-)
+  - [📌 Table of Contents](#-table-of-contents)
+  - [📚 Built-in Functions](#-built-in-functions)
+  - [📚 Creating Basic Functions](#-creating-basic-functions)
+  - [📚 Function with Parameters](#-function-with-parameters)
+  - [📚 Function with Default Parameters](#-function-with-default-parameters)
 <hr>
 <br><br>
 
