@@ -1,6 +1,18 @@
 # <div align="center"> 🔰 Mojo </div>
 
 ## 📌 Table of contents
+- [ 🔰 Mojo ](#--mojo-)
+  - [📌 Table of contents](#-table-of-contents)
+  - [📚 Introduction](#-introduction)
+  - [📚 Features](#-features)
+  - [📚 Variables](#-variables)
+  - [📚 Data types](#-data-types)
+  - [📚 Condition](#-condition)
+  - [📚 Loops](#-loops)
+  - [📚 Functions](#-functions)
+  - [📚 Classes](#-classes)
+  - [📚 Error Handling](#-error-handling)
+  - [📚 Inout, Borrowed, Owned](#-inout-borrowed-owned)
 <hr>
 <br><br>
 
