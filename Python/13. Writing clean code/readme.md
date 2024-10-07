@@ -1,6 +1,11 @@
 # <div align="center"> 🔰 Writing clean and efficient code </div>
 
 ## 📌 Table of contents
+- [ 🔰 Writing clean and efficient code ](#--writing-clean-and-efficient-code-)
+  - [📌 Table of contents](#-table-of-contents)
+  - [📚 Naming variables](#-naming-variables)
+  - [📚 Documentation](#-documentation)
+  - [📚 Functions](#-functions)
 <hr>
 <br><br>
 
