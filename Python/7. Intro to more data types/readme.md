@@ -6,7 +6,7 @@
   - [📚 Tuple Data Type](#-tuple-data-type)
   - [📚 Dictionary Data Type](#-dictionary-data-type)
   - [📚 Set Data Type](#-set-data-type)
-  - [📚 list vs tuple vs dictionary Vs set](#-list-vs-tuple-vs-dictionary-vs-set)
+  - [📚 list vs tuple vs dictionary vs set](#-list-vs-tuple-vs-dictionary-vs-set)
 <hr>
 <br><br>
 
@@ -202,12 +202,26 @@
 
 <br><br>
 
-## 📚 list vs tuple vs dictionary Vs set
-| List | Tuple | Dictionary | Set |
-| --- | --- | --- | --- |
-| Ordered | Ordered | Unordered | Unordered |
-| Changeable | Unchangeable | Changeable | Changeable |
-| Allows duplicate members | Allows duplicate members | No duplicate members | No duplicate members |
+## 📚 list vs tuple vs dictionary vs set
+| Description | List | Tuple | Dictionary | Set |
+| --- | --- | --- | --- | --- |
+| Indexed (items have a defined position or key) | ✔️ | ✔️ | ✔️ | ❌ |
+| Ordered (the previous item has to come before the next item) | ✔️ | ✔️ | ❌ | ❌ |
+| Duplicate Members | ✔️ | ✔️ | ❌ | ❌ |
+| Changeable | ✔️ | ❌ | ✔️ | ✔️ |
+| Syntax | square brackets <br> `a = [1, 2, 3]` | round brackets <br> `a = (1, 2, 3)` | curly brackets <br> `a = {"name": "John", "age": 36}` | curly brackets <br> `a = {"apple", "banana", "cherry"}` |
+| Print specific item | `print(a[1]) # Output: 2` | `print(a[1]) # Output: 2` | `print(a["name"]) # Output: John` | Not possible |
+| Add item | `a.append(4)` | Not possible | `a["color"] = "red"` | `a.add("orange")` |
+| Remove specific item | `a.remove(2) # Output: [1, 3]` | Not possible | `a.pop("name") # Output: {'age': 36}` | `a.remove("banana") # Output: {'apple', 'cherry'}` |
+| Remove specific index | `a.pop(1) # Output: [1, 3]` | Not possible | Not possible | Not possible |
+| Remove last item | `a.pop() # Output: [1, 2]` | Not possible | Not possible | Not possible |
+| Clear all items | `a.clear()` | Not possible | `a.clear()` | `a.clear()` |
+| Loop through | `for x in a: print(x)` | `for x in a: print(x)` | `for x in a: print(a[x])` <br> # or <br> `for (x, y) in a.items(): print(x, y)` | `for x in a: print(x)` |
+| Length | `len(a)` | `len(a)` | `len(a)` | `len(a)` |
+| Copy | `b = a.copy()` | `b = a` | `b = a.copy()` | `b = a.copy()` |
+| Join | `a + b` | Not possible | Not possible | `a.union(b)` |
+| Difference | `a - b` | Not possible | Not possible | `a.difference(b)` |
+| Intersection | Not possible | Not possible | Not possible | `a.intersection(b)` |
 
 <hr>
 

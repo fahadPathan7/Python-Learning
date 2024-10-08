@@ -1,6 +1,11 @@
 # <div align="center"> 🔰 Level 8 Methods and Advanced Strings </div>
 
 ## 📌Table of Contents
+- [ 🔰 Level 8 Methods and Advanced Strings ](#--level-8-methods-and-advanced-strings-)
+  - [📌Table of Contents](#table-of-contents)
+  - [📚 Methods](#-methods)
+  - [📚 Lambda and Map](#-lambda-and-map)
+  - [📚 Recursion](#-recursion)
 <hr>
 <br><br>
 
@@ -113,7 +118,7 @@
     def myfunc(n):
         return len(n)
 
-    x = map(myfunc, ('apple', 'banana', 'cherry'))
+    x = map(myfunc, ('apple', 'banana', 'cherry')) # here myfunc is called for each item in the tuple
     print(list(x)) # Output: [5, 6, 6]
     ```
 <br>

@@ -71,6 +71,9 @@
     ```python
     thislist = ["apple", "banana", "cherry"]
     mylist = thislist.copy()
+    # mylist = thislist[:] # Another way to copy a list
+    # mylist = list(thislist) # Another way to copy a list
+    # mylist = thislist # This will not copy the list, it will only create a reference to the original list
     print(mylist) # Output: ['apple', 'banana', 'cherry']
     ```
 - Join Two Lists

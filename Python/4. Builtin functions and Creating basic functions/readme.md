@@ -18,16 +18,12 @@
     ```
 - **min()** - Returns the smallest item in an iterable.
     ```python
-    a = 5
-    b = 1
-    c = 3
+    a = [5, 1, 3]
     print(min(a)) # Output: 1
     ```
 - **max()** - Returns the largest item in an iterable.
     ```python
-    a = 5
-    b = 1
-    c = 3
+    a = [5, 1, 3]
     print(max(a)) # Output: 5
     ```
 - **round()** - Rounds a number to a specified number of decimal places.
@@ -72,5 +68,8 @@ def add(a, b=3):
 
 result = add(5)
 print(result) # Output: 8
+
+result = add(5, 4)
+print(result) # Output: 9
 ```
 <hr>

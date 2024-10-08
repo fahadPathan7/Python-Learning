@@ -113,8 +113,8 @@ class Computer:
 c = Computer()
 c.sell() # Output: Selling Price: 900
 
-c.__maxprice = 1000
-c.sell() # Output: Selling Price: 900
+c.__maxprice = 1000 # This will not change the price because __maxprice is a private variable.
+c.sell() # Output: Selling Price: 900 (private variable is not changed)
 
 c.setMaxPrice(1000)
 c.sell() # Output: Selling Price: 1000
@@ -149,6 +149,7 @@ flying_test(penguin) # Output: Penguin can't fly
 - method overriding: In Python, the method overriding is an ability of a class to change the implementation of a method provided by one of its base classes.
 
 ```python
+# parent class
 class Bird:
     def intro(self):
         print("There are many types of birds.")
@@ -156,6 +157,7 @@ class Bird:
     def flight(self):
         print("Most of the birds can fly but some cannot.")
 
+# child class
 class Sparrow(Bird):
     def flight(self):
         print("Sparrows can fly.")
@@ -219,7 +221,7 @@ class Employee:
     def __init__(self, pay, bonus):
         self.pay = pay
         self.bonus = bonus
-        self.obj_salary = Salary(self.pay)
+        self.obj_salary = Salary(self.pay) # creating an object of the Salary class.
 
     def get_total_salary(self):
         return self.obj_salary.get_total() + self.bonus

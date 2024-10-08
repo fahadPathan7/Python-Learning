@@ -6,6 +6,7 @@
   - [📚 What is Python?](#-what-is-python)
   - [📚 Features of Python](#-features-of-python)
   - [📚 Printing something](#-printing-something)
+  - [📚 Taking input](#-taking-input)
 <hr>
 <br><br>
 
@@ -50,5 +51,93 @@
     ```
     Hello, World!
     ```
-<hr>
 
+<br><br>
+
+## 📚 Taking input
+- To take input from the user, we use the `input()` function.
+
+    ```python
+    name = input("Enter your name: ")
+    print("Hello", name)
+    ```
+
+    Output:
+    ```
+    Enter your name: Fahad
+    Hello Fahad
+    ```
+
+- The `input()` function always returns a string. If we want to take an integer input, we can typecast it to an integer.
+
+    ```python
+    age = int(input("Enter your age: "))
+    print("Your age is", age)
+    ```
+
+    Output:
+    ```
+    Enter your age: 20
+    Your age is 20
+    ```
+
+- We can also take multiple inputs in a single line.
+
+    ```python
+    name, age = input("Enter your name and age: ").split() # taking multiple inputs
+    print("Your name is", name, "and your age is", age)
+    ```
+
+    Output:
+    ```
+    Enter your name and age: Fahad 20
+    Your name is Fahad and your age is 20
+    ```
+
+    ```python
+    arr = list(map(int, input("Enter multiple values: ").split())) # taking multiple integer inputs
+    print("Values are", arr)
+    ```
+    Output:
+    ```
+    Enter multiple values: 1 2 3 4 5
+    Values are [1, 2, 3, 4, 5]
+    ```
+
+- We can also take fixed and different length of inputs.
+
+    ```python
+    a, *b = map(int, input("Enter multiple values: ").split()) # taking multiple integer inputs.
+    # a will store the first value and b will store the rest of the values. type(a) will be int and type(b) will be list.
+    print("a is", a, "and b is", b)
+    ```
+    Output:
+    ```
+    Enter multiple values: 1 2 3 4 5
+    a is 1 and b is [2, 3, 4, 5]
+    ```
+
+- Output on the same line.
+
+    ```python
+    # 1
+    print("Hello", end=" ") # default value of end is '\n' (newline). We can change it to any other value space, comma, etc.
+    print("World")
+
+    # 2
+    print("Hello", end=", ")
+    print("World")
+
+    # 3
+    print("Hello", end="")
+    print("World")
+    ```
+
+    Output:
+    ```python
+    Hello World # 1
+    Hello, World # 2
+    HelloWorld # 3
+    ```
+
+<hr>
