@@ -12,6 +12,7 @@
   - [🪶 Define a model](#-define-a-model)
   - [🪶 Create the database tables](#-create-the-database-tables)
   - [🪶 Define a route](#-define-a-route)
+  - [🪶 Run the server](#-run-the-server)
   - [🪶 SQLAlchemy Commands](#-sqlalchemy-commands)
 <hr>
 <br><br>
@@ -173,15 +174,6 @@ def users():
         return render_template('users.html', users=users) # Render the users.html template with the users object.
 ```
 
-```html
-<!-- this form is used to submit the user data to the server -->
-<form method="POST" action="/users">
-    <input type="text" name="name" placeholder="Name">
-    <input type="email" name="email" placeholder="Email">
-    <button type="submit">Submit</button>
-</form>
-```
-
 - We define routes by using the `@app.route()` decorator.
 - The decorator specifies the URL path that the route should respond to.
 - The route is specified as a string. For example, `'/'` specifies the root URL, and `'/users/<int:id>'` specifies a URL with a parameter.
@@ -197,6 +189,7 @@ def users():
     </form>
     ```
 - The `redirect()` function is used to redirect the user to another endpoint. For example, `return redirect(url_for('users'))` redirects the user to the `users` route. Here, the page is redirected to the same route after adding a new user. This is done to display the updated list of users.
+- The `url_for()` function generates a URL to the given endpoint. For example, `url_for('users')` generates the URL for the `users` route.
 
 <br><br>
 
