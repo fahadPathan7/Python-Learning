@@ -39,7 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp', # added this line
+    'tailwind', # added this line
+    'theme', # added this line
+    'django_browser_reload', # added this line
 ]
+
+TAILWIND_APP_NAME = 'theme' # added this line
+INTERNAL_IPS = ['127.0.0.1'] # added this line
+NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"  # added this line
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -49,6 +56,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'django_browser_reload.middleware.BrowserReloadMiddleware', # added this line
 ]
 
 ROOT_URLCONF = 'myproject.urls'
