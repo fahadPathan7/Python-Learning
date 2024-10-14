@@ -787,17 +787,22 @@ select {
   position: static;
 }
 
-.m-4 {
-  margin: 1rem;
-}
-
 .m-2 {
   margin: 0.5rem;
+}
+
+.m-4 {
+  margin: 1rem;
 }
 
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .block {
@@ -812,29 +817,12 @@ select {
   display: grid;
 }
 
-.size-4 {
-  width: 1rem;
-  height: 1rem;
+.h-56 {
+  height: 14rem;
 }
 
 .h-screen {
   height: 100vh;
-}
-
-.h-5 {
-  height: 1.25rem;
-}
-
-.h-20 {
-  height: 5rem;
-}
-
-.h-32 {
-  height: 8rem;
-}
-
-.h-56 {
-  height: 14rem;
 }
 
 .grid-cols-3 {
@@ -881,16 +869,6 @@ select {
   padding-right: 1rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -935,14 +913,19 @@ select {
   letter-spacing: 0em;
 }
 
-.text-orange-600 {
+.text-black {
   --tw-text-opacity: 1;
-  color: rgb(234 88 12 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-orange-600 {
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity));
 }
 
 .shadow-lg {
