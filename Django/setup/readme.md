@@ -1,5 +1,24 @@
 # <div align='center'> Django Setup </div>
 
+## 📌 Table of Contents
+- [ Django Setup ](#-django-setup-)
+  - [📌 Table of Contents](#-table-of-contents)
+  - [Step 1: Install uv](#step-1-install-uv)
+  - [Step 2: Create a virtual environment](#step-2-create-a-virtual-environment)
+  - [Step 3: Activate the virtual environment](#step-3-activate-the-virtual-environment)
+  - [Step 4: Install Django](#step-4-install-django)
+  - [Step 5: Create a Django project](#step-5-create-a-django-project)
+  - [Step 6: Run the Django server](#step-6-run-the-django-server)
+  - [Step 7: Create a Django app](#step-7-create-a-django-app)
+  - [Step 9: Install pip](#step-9-install-pip)
+  - [Step 10: Tailwind init](#step-10-tailwind-init)
+  - [Step 13: Install tailwindcss](#step-13-install-tailwindcss)
+  - [Step 14: Start tailwindcss](#step-14-start-tailwindcss)
+  - [Step 15: Migrate the database](#step-15-migrate-the-database)
+  - [Step 16: Create a superuser](#step-16-create-a-superuser)
+  - [Step 17: Install Pillow](#step-17-install-pillow)
+  - [Step 18: Migrate Models](#step-18-migrate-models)
+
 ## Step 1: Install uv
 ```bash
 pip install uv
@@ -184,3 +203,40 @@ python manage.py createsuperuser
 - a superuser is a user who has all the permissions in our Django project.
 - we can use this user to log in to the Django admin interface.
 - we can access the Django admin interface by going to `http://localhost:8000/admin` in our browser.
+
+## Step 17: Install Pillow
+```bash
+uv pip install Pillow
+```
+
+- this will install the `Pillow` package.
+- it is a Python Imaging Library (PIL) that allows us to work with images in our Django project.
+- `settings.py` file needs to be updated for the media files.
+    ```python
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    ```
+- `urls.py` file needs to be updated for the media files.
+    ```python
+    from django.conf import settings
+    from django.conf.urls.static import static
+
+    urlpatterns = [
+        ...
+    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    ```
+
+- this will allow us to upload images to our Django project.
+- we can use the `ImageField` model field to store images in our database.
+
+## Step 18: Migrate Models
+```bash
+# python manage.py makemigrations # this will create the necessary database tables for our project (all apps)
+python manage.py makemigrations myapp # myapp is the name of the app (specific app. better approach)
+python manage.py migrate # this will create the necessary database tables for our app
+```
+
+- this will create the necessary database tables for our Django project.
+- it will also create the necessary database tables for our app.
+- we will see a folder called `migrations` inside our app folder.
+- Inside the `migrations` folder, there will be a file called `0001_initial.py`. This file contains the database schema for our app.

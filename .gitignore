@@ -3,3 +3,4 @@ Flask/env/
 instance/
 Flask/__pycache__/
 .vscode/
+media/

@@ -4,6 +4,7 @@ This repository is dedicated to documenting my learning process in **Python** an
 
 ## 📚 Topics Covered
 - **[Python](./Python/)**: Fundamental and advanced Python concepts, libraries, and coding practices 🐍.
-- **[Flask](./Flask/)**: Web development with Flask, building APIs, and deploying web applications 🌐.
+- **[Flask](./Flask/)**: Web development with Flask, building APIs 🔦.
+- **[Django](./Django/)**: Web development with Django, building web applications 🌐.
 
 ---

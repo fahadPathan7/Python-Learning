@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +27,6 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('myapp/', include('myapp.urls')), # added app url
 
-    path('__reload__/', include('django_browser_reload.urls')), # added this line
-]
+    path('__reload__/', include('django_browser_reload.urls')), # (this needs to be the last line)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
