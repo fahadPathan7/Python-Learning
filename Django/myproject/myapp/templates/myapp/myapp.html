@@ -8,7 +8,7 @@
 <div class="grid grid-cols-3 gap-4 m-4">
 {% for tea in all_tea %}
 <div class="bg-orange-600 p-5 rounded">
-    <h3 class="text-left text-lg font-bold text-center"> {{ tea.name }} </h3>
+    <h3 class="text-lg font-bold text-center"> {{ tea.name }} </h3>
     <img class="rounded h-56 text-center mx-auto block m-2 shadow-lg" src="{{ tea.image.url }}" alt="{{ tea.name }}">
     <p> Tea Type: {{ tea.cha_type }} </p>
     <p> Price: {{ tea.price }} </p>
