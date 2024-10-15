@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block title %}Tweet Page{% endblock %}
+
+{% block content %}
+    <h1 class="text-center mt-4"> This is my tweet page </h1>
+
+    {% if user.is_authenticated %}
+    <a class="btn btn-primary mb-4" href="{% url 'tweet_create' %}">Create a Tweet</a>
+    {% endif %}
+
+    <div class="container row gap-3 mb-5 justify-content-center">
+      {% for tweet in tweets %}
+      <div class="card d-flex flex-column" style="width: 20rem;">
+          {% if tweet.photo and tweet.photo.url %}
+          <img src="{{tweet.photo.url}}" class="card-img-top mt-2" alt="..." height="180px">
+          {% endif %}
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="card-title">{{tweet.user.username}}</h5>
+              <p class="card-text">{{tweet.text}}</p>
+            </div>
+            {% if tweet.user == user %}
+            <div class="mt-auto">
+              <a href="{% url 'tweet_edit' tweet.id %}" class="btn btn-primary">Edit</a>
+              <a href="{% url 'tweet_delete' tweet.id %}" class="btn btn-danger">Delete</a>
+            </div>
+            {% endif %}
+          </div>
+      </div>
+      {% endfor %}
+  </div>
+
+
+{% endblock %}
