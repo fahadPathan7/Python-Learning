@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}This is Profile page{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-4"> This is my profile page </h1>
+
+<h4>
+    {% if user.image and user.image.url %}
+    <img src="{{ profile.image.url }}" alt="profile image" style="width: 100px; height: 100px;">
+    {% endif %}
+    {{ profile.user.username }} <br>
+    {{ profile.bio }} <br>
+    {{ profile.address }} <br>
+    {{ profile.date_of_birth }} <br>
+    {{ profile.nationality}} <br>
+</h4>
+    <a class="btn btn-success" href="{% url 'edit_profile' user.id %}">Edit Profile</a>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}This is Profile page{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-4"> This is my profile page </h1>
+
+<h4>
+    <form method='POST' enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+    </form>
+    <p>Go to the previous page? <a href="{% url 'view_profile' %}">Profile page</a></p>
+{% endblock %}
