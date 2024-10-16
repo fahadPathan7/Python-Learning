@@ -132,6 +132,9 @@ STATIC_URL = 'static/' # for css
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static') ] # for css
 
 # for login
-LOGIN_URL = '/accounts/login/'
+# for using these, we need to create a folder named 'registration' in the templates folder. inside this we need to create files named
+# login.html, logged_out.html, password_change_form.html, password_change_done.html, password_reset_form.html, password_reset_done.html,
+# password_reset_complete.html, password_reset_email.html and password_reset_confirm.html (add only which are needed)
+LOGIN_URL = '/accounts/login/' # this can be used in the template. like this: <a href="{% url 'login' %}">Login</a>
 LOGIN_REDIRECT_URL = '/tweet/'
 LOGOUT_REDIRECT_URL = '/tweet/'
