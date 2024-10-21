@@ -1,14 +1,27 @@
 {% extends "layout.html" %}
 
-{% block title %}This is Profile page{% endblock %}
+{% block title %}Profile Update{% endblock %}
 
 {% block content %}
-<h1 class="text-center mt-4"> This is my profile page </h1>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <h1 class="text-center mb-4">Update Profile</h1>
 
-<h4>
-    <form method='POST' enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-    </form>
-    <p>Go to the previous page? <a href="{% url 'view_profile' %}">Profile page</a></p>
+            <div class="card p-4">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-lg mt-3" type="submit">Update</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="text-center mt-4">
+                <p>Want to go back? <a href="{% url 'view_profile' user.id %}">Profile page</a></p>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

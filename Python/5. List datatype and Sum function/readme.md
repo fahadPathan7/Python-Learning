@@ -70,10 +70,10 @@
 - Copy a List
     ```python
     thislist = ["apple", "banana", "cherry"]
-    mylist = thislist.copy()
+    mylist = thislist.copy() # Copy a list (Deep Copy)
     # mylist = thislist[:] # Another way to copy a list
     # mylist = list(thislist) # Another way to copy a list
-    # mylist = thislist # This will not copy the list, it will only create a reference to the original list
+    # mylist = thislist # This will not copy the list, it will only create a reference to the original list (changes will affect both lists) (Shallow Copy)
     print(mylist) # Output: ['apple', 'banana', 'cherry']
     ```
 - Join Two Lists

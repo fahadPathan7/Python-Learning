@@ -72,4 +72,5 @@ print(result) # Output: 8
 result = add(5, 4)
 print(result) # Output: 9
 ```
+
 <hr>

@@ -51,6 +51,60 @@
     ```
     Hello, World!
     ```
+- We can use `,` to print variables.
+
+    ```python
+    name = "Fahad"
+    age = 20
+    print("My name is", name, "and I am", age, "years old.")
+    ```
+
+    Output:
+    ```
+    My name is Fahad and I am 20 years old.
+    ```
+- We can also use the `+` operator to concatenate strings.
+
+    ```python
+    print("Hello, " + "World!")
+    ```
+    Output:
+    ```
+    Hello, World!
+    ```
+- We can also use the `end` parameter to change the default newline character.
+
+    ```python
+    print("Hello", end=" ")
+    print("World")
+    ```
+    Output:
+    ```
+    Hello World
+    ```
+- We can also use the `sep` parameter to change the default space separator.
+
+    ```python
+    print("Hello", "World", sep=", ")
+    ```
+    Output:
+    ```
+    Hello, World
+    ```
+- Printing variables with formatter.
+
+    ```python
+    name = "Fahad"
+    age = 20
+    print("My name is {} and I am {} years old.".format(name, age))
+    print(f"My name is {name} and I am {age} years old.")
+    ```
+
+    Output:
+    ```
+    My name is Fahad and I am 20 years old.
+    My name is Fahad and I am 20 years old.
+    ```
 
 <br><br>
 

@@ -17,6 +17,7 @@ def view_profile(request, user_id):
 def edit_profile(request, user_id):
     user = User.objects.get(id=user_id)
     profile = UserProfile.objects.get(user=user)
+    form = None
     if request.method == 'POST':
         form = UserProfileForm(request.POST, request.FILES, instance=profile)
         if form.is_valid():

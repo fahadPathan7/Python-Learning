@@ -1,6 +1,8 @@
 temp.py
+practice.txt
 Flask/env/
 instance/
 Flask/__pycache__/
 .vscode/
 media/
+.venv/
