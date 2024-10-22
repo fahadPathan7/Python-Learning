@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from schemas import GenreChoices, Band
+from schemas import GenreChoices, Band, BandCreate, BandWithID
 
 app = FastAPI()
 
@@ -27,7 +27,7 @@ async def bands(
     band_list = [Band(**band) for band in BANDS]
     if genre:
         band_list = [
-            band for band in band_list if band.genre == genre.value
+            band for band in band_list if band.genre == genre
         ]
     if has_album:
         band_list = [
@@ -55,3 +55,10 @@ async def bands_with_same_genre(genre: str) -> list[dict]:
     return [
         band for band in BANDS if band['genre'] == genre
     ]
+
+@app.post('/bands')
+async def create_band(band_data: BandCreate) -> BandWithID:
+    band_id = max([band['id'] for band in BANDS]) + 1
+    band = BandWithID(id=band_id, **band_data.model_dump()).model_dump()
+    BANDS.append(band)
+    return band

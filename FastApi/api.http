@@ -1,0 +1,11 @@
+POST http://localhost:8000/bands/
+Content-Type: application/json
+
+{
+    "name": "The Beatles",
+    "genre": "genre2",
+    "members": 4
+}
+
+### get request
+GET http://localhost:8000/bands?genre=genre2
