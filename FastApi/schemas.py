@@ -6,8 +6,6 @@ from datetime import date
 class GenreChoices(Enum):
     genre1 = 'genre1'
     genre2 = 'genre2'
-    genre3 = 'genre3'
-    genre4 = 'genre4'
 
 class Album(BaseModel):
     title: str
@@ -18,5 +16,5 @@ class Band(BaseModel):
     id: int
     name: str
     members: int
-    genre: GenreChoices
+    genre: str
     album: list[Album] = [] # list of Album objects (empty list by default)
