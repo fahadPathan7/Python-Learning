@@ -6,3 +6,4 @@ Flask/__pycache__/
 .vscode/
 media/
 .venv/
+venv-fastapi/
